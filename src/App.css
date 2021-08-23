@@ -1,38 +1,42 @@
-.App {
+.background__container {
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.background__image {
+  width: 100%;
+  height: 100%;
+}
+
+.background__title {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 150vh;
+  font-size: 2.8rem;
   color: white;
+  z-index: 8;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
 }
 
-.App-link {
-  color: #61dafb;
+.background__button {
+  z-index: 8;
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.goo {
+    box-decoration-break: clone;
+    background: #3f51b5;
+    padding: 0.5rem 1rem;
+    filter: url('#goo');
+}
+
+.goo:focus {
+    outline: 0;
 }
