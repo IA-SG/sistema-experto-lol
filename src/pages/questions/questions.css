@@ -1,0 +1,8 @@
+.question__background {
+  height: 100vh;
+  overflow-y: hidden;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+}

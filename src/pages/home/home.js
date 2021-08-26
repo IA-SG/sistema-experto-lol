@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import allChampsImg from "../../assets/all-champs.jpg";
+import { Link } from "react-router-dom";
 import "./home.css";
 
 const HomePage = () => {
@@ -27,14 +28,16 @@ const HomePage = () => {
           </filter>
         </defs>
       </svg>
-      <Button
-        className="background__button"
-        variant="contained"
-        color="primary"
-        size="large"
-      >
-        Empezar
-      </Button>
+      <Link to="/questions">
+        <Button
+          className="background__button"
+          variant="contained"
+          color="primary"
+          size="large"
+        >
+          Empezar
+        </Button>
+      </Link>
       <img
         src={allChampsImg}
         className="background__image"
