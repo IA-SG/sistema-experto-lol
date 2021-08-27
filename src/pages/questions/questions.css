@@ -9,6 +9,9 @@
 
 .question__container {
     width: 80vw;
+    height: 12vh;
+    border-radius: 20px;
+    background-color: #E5E4E2;
 }
 
 .question__container h2 {
@@ -17,4 +20,10 @@
 
 .question__answer {
     width: 80vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    
+    background-color: #B6D0E2;
 }

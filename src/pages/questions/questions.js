@@ -3,6 +3,7 @@ import { firstQuestionsArray, questionsArray } from "../../assets/questions";
 import QuestionComponent from "../../components/answer";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Box from "@material-ui/core/Box";
 import "./questions.css";
 
 const QuestionsPage = () => {
@@ -120,7 +121,7 @@ const QuestionsPage = () => {
         justifyContent="space-evenly"
         alignItems="center"
       >
-        <div className="question__container">
+        <Box boxShadow={3} className="question__container">
           {isFirstQuestion
             ? firstQuestionsArray.length !== 0 && (
                 <h2>{firstQuestionsArray[index - 1].question}</h2>
@@ -128,8 +129,8 @@ const QuestionsPage = () => {
             : questionsArray.length !== 0 && (
                 <h2>{questionsArray[index - 1].question}</h2>
               )}
-        </div>
-        <div className="question__answer">
+        </Box>
+        <Box boxShadow={3} className="question__answer">
           <Grid
             container
             direction="row"
@@ -143,6 +144,7 @@ const QuestionsPage = () => {
                     onClick={() => handleFirstQuestions(index - 1, i)}
                     variant="outlined"
                     color="primary"
+                    size="large"
                   >
                     {answer}
                   </Button>
@@ -153,12 +155,13 @@ const QuestionsPage = () => {
                     onClick={handleNext}
                     variant="outlined"
                     color="primary"
+                    size="large"
                   >
                     {answer}
                   </Button>
                 ))}
           </Grid>
-        </div>
+        </Box>
       </Grid>
     </div>
   );
