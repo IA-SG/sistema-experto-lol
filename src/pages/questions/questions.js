@@ -102,7 +102,6 @@ const QuestionsPage = () => {
     } else if (questionIndex === 2) {
       setPlayerType(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIsFirstQuestion(false);
-      setIndex(1);
     }
   };
 
