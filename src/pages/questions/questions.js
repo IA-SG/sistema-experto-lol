@@ -94,10 +94,8 @@ const QuestionsPage = () => {
         if (questionIndex === 5) {
             if (reponseIndex === 0) {
                 setChampions([championArray[0], championArray[1]]);
-                
             } else {
                 setChampions([championArray[2], championArray[3]]);
-                
             }
         } else if (questionIndex === 4) {
             if (reponseIndex === 0) {
@@ -116,10 +114,14 @@ const QuestionsPage = () => {
                 setChampions([championArray[11]]);
             } else {
                 setChampions([championArray[12], championArray[13]]);
-            }   
+            }
         } else if (questionIndex === 8) {
             if (reponseIndex === 0) {
-                setChampions([championArray[14], championArray[15], championArray[16]]);
+                setChampions([
+                    championArray[14],
+                    championArray[15],
+                    championArray[16],
+                ]);
             } else {
                 setChampions([championArray[17]]);
             }
@@ -129,14 +131,14 @@ const QuestionsPage = () => {
             } else {
                 setChampions([championArray[20]]);
             }
-        //Peleas grupales o uno contra uno
+            //Peleas grupales o uno contra uno
         } else if (questionIndex === 10) {
             if (reponseIndex === 0) {
                 setChampions([championArray[21]]);
             } else {
                 setChampions([championArray[22]]);
             }
-        // Control de masas jungle
+            // Control de masas jungle
         } else if (questionIndex === 11) {
             if (reponseIndex === 0) {
                 setChampions([championArray[23]]);
@@ -172,6 +174,7 @@ const QuestionsPage = () => {
     };
 
     const handleFirstQuestions = (questionIndex, responseIndex) => {
+        console.log('Hi');
         if (questionIndex === 0) {
             setUser({ ...user, line: responseIndex });
             setIndex(index + 1);
@@ -191,8 +194,8 @@ const QuestionsPage = () => {
                 <Grid
                     container
                     direction="column"
-                    justifyContent="space-evenly"
-                    alignItems="center">
+                    justifyContent="center"
+                    alignItems="flex-items">
                     <Box boxShadow={3} className="question__container">
                         {questionsArray.length !== 0 && (
                             <>
@@ -200,11 +203,12 @@ const QuestionsPage = () => {
                             </>
                         )}
                     </Box>
+                    <div style={{ height: '5vh' }}></div>
                     <Box boxShadow={3} className="question__answer">
                         <Grid
                             container
                             direction="row"
-                            justifyContent="space-around"
+                            justifyContent="center"
                             alignItems="center">
                             {questionsArray.length !== 0 &&
                                 questionsArray[index - 1].answers.map(
@@ -221,7 +225,8 @@ const QuestionsPage = () => {
                                                           i
                                                       );
                                             }}
-                                            variant="outlined"
+                                            style={{ margin: '10px' }}
+                                            variant="contained"
                                             color="primary"
                                             size="large">
                                             {answer}

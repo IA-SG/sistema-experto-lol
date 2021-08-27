@@ -5,10 +5,15 @@
   background: white;
   display: flex;
   justify-content: center;
+  background-image: url("../../assets/zed.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
 
 .question__container {
-    width: 80vw;
+    margin-left: 8vw;
+    width: 65vw;
     height: 12vh;
     border-radius: 20px;
     background-color: #E5E4E2;
@@ -19,11 +24,12 @@
 }
 
 .question__answer {
-    width: 80vw;
+    margin-left: 8vw;
+    width: 65vw;
     height: 15vh;
     display: flex;
     justify-content: center;
     border-radius: 20px;
     
-    background-color: #B6D0E2;
+    background-color: #CCCBCA;
 }
