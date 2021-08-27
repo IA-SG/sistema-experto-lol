@@ -6,3 +6,15 @@
   display: flex;
   justify-content: center;
 }
+
+.question__container {
+    width: 80vw;
+}
+
+.question__container h2 {
+    text-align: center;
+}
+
+.question__answer {
+    width: 80vw;
+}
