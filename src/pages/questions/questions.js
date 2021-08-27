@@ -8,6 +8,7 @@ import "./questions.css";
 
 const QuestionsPage = () => {
   const [index, setIndex] = useState(1);
+  const [newIndex, setNewIndex] = useState(1);
   const [isFirstQuestion, setIsFirstQuestion] = useState(true);
   const [line, setLine] = useState("");
   const [damage, setDamage] = useState("");
@@ -15,49 +16,50 @@ const QuestionsPage = () => {
   const [champions, setChampions] = useState([]);
 
   const hanldeQuestion = (line, damage, playerType) => {
+    console.log(`${playerType}`);
     switch (line) {
       case line[0]:
         if (damage == damage[0]) {
           if (playerType == playerType[0]) {
-            setIndex(2);
+            setNewIndex(2);
           } else {
-            setIndex(1);
+            setNewIndex(1);
           }
         } else {
           if (playerType == playerType[0]) {
-            setIndex(3);
+            setNewIndex(3);
           } else {
-            setIndex(4);
+            setNewIndex(4);
           }
         }
         break;
       case line[1]:
         if (damage == damage[0]) {
           if (playerType == playerType[0]) {
-            setIndex(5);
+            setNewIndex(5);
           } else {
-            setIndex(4);
+            setNewIndex(4);
           }
         } else {
           if (playerType == playerType[0]) {
-            setIndex(6);
+            setNewIndex(6);
           } else {
-            setIndex(5);
+            setNewIndex(5);
           }
         }
         break;
       case line[2]:
         if (damage == damage[0]) {
           if (playerType == playerType[0]) {
-            setIndex(9);
+            setNewIndex(9);
           } else {
             //champ response
           }
         } else {
           if (playerType == playerType[0]) {
-            setIndex(9);
+            setNewIndex(9);
           } else {
-            setIndex(8);
+            setNewIndex(8);
           }
         }
         break;
@@ -75,15 +77,15 @@ const QuestionsPage = () => {
       case line[4]:
         if (damage == damage[0]) {
           if (playerType == playerType[0]) {
-            setIndex(12);
+            setNewIndex(12);
           } else {
-            setIndex(4);
+            setNewIndex(4);
           }
         } else {
           if (playerType == playerType[0]) {
-            setIndex(10);
+            setNewIndex(10);
           } else {
-            setIndex(11);
+            setNewIndex(11);
           }
         }
         break;
@@ -97,10 +99,10 @@ const QuestionsPage = () => {
     } else if (questionIndex === 1) {
       setDamage(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIndex(index + 1);
-    } else {
+    } else if (questionIndex === 2) {
       setPlayerType(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIsFirstQuestion(false);
-      hanldeQuestion(line, damage, playerType);
+      setIndex(1);
     }
   };
 
@@ -118,7 +120,7 @@ const QuestionsPage = () => {
                 <h2>{firstQuestionsArray[index - 1].question}</h2>
               )
             : questionsArray.length !== 0 && (
-                <h2>{questionsArray[index - 1].question}</h2>
+                <h2>{questionsArray[newIndex - 1].question}</h2>
               )}
         </Box>
         <Box boxShadow={3} className="question__answer">
@@ -132,7 +134,9 @@ const QuestionsPage = () => {
               ? firstQuestionsArray.length !== 0 &&
                 firstQuestionsArray[index - 1].answers.map((answer, i) => (
                   <Button
-                    onClick={() => handleFirstQuestions(index - 1, i)}
+                    onClick={() => {
+                      handleFirstQuestions(index - 1, i);
+                    }}
                     variant="outlined"
                     color="primary"
                     size="large"
@@ -141,7 +145,7 @@ const QuestionsPage = () => {
                   </Button>
                 ))
               : questionsArray.length !== 0 &&
-                questionsArray[index - 1].answers.map((answer) => (
+                questionsArray[newIndex - 1].answers.map((answer) => (
                   <Button
                     onClick={() => {
                       hanldeQuestion(line, damage, playerType);
