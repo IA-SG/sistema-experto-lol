@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { firstQuestionsArray, questionsArray } from "../../assets/questions";
 import QuestionComponent from "../../components/answer";
 import Grid from "@material-ui/core/Grid";
@@ -90,28 +90,19 @@ const QuestionsPage = () => {
     }
   };
 
-  const handleNext = () => {
-    if (index < questionsArray.length) {
-      setIndex(index + 1);
-    }
-  };
-
-  const handleQuestionChanged = () => {
-    setIndex(1);
-  };
-
   const handleFirstQuestions = (questionIndex, responseIndex) => {
-    if(questionIndex === 0) {
+    if (questionIndex === 0) {
       setLine(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIndex(index + 1);
-    } else if ( questionIndex === 1 ) {
+    } else if (questionIndex === 1) {
       setDamage(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIndex(index + 1);
     } else {
       setPlayerType(firstQuestionsArray[questionIndex].answers[responseIndex]);
       setIsFirstQuestion(false);
+      hanldeQuestion(line, damage, playerType);
     }
-  }
+  };
 
   return (
     <div className="question__background">
@@ -152,7 +143,9 @@ const QuestionsPage = () => {
               : questionsArray.length !== 0 &&
                 questionsArray[index - 1].answers.map((answer) => (
                   <Button
-                    onClick={handleNext}
+                    onClick={() => {
+                      hanldeQuestion(line, damage, playerType);
+                    }}
                     variant="outlined"
                     color="primary"
                     size="large"
