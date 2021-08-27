@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-    firstQuestionsArray,
     questionsArray,
 } from '../../assets/questionsJson';
-import QuestionComponent from '../../components/answer';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
@@ -16,18 +14,9 @@ const QuestionsPage = () => {
         damage: 0,
         playerType: 0,
     });
-    let question = {};
     const [champions, setChampions] = useState([]);
 
-    useEffect(() => {
-        question = questionsArray.filter(
-            (question) => question.id === index
-        )[0];
-        console.log('Question ', question);
-    }, [index]);
-
     const hanldeQuestion = (user, playerType) => {
-        console.log(user);
         if (user.line === 0) {
             console.log('Entonces=');
             if (user.damage === 0) {
@@ -121,22 +110,11 @@ const QuestionsPage = () => {
                 justifyContent="space-evenly"
                 alignItems="center">
                 <Box boxShadow={3} className="question__container">
-                    {false
-                        ? questionsArray.length !== 0 && (
-                              <h2>
-                                  {
-                                      questionsArray.filter(
-                                          (question) => question.id == index
-                                      ).id
-                                  }
-                              </h2>
-                          )
-                        : questionsArray.length !== 0 && (
-                              <>
-                                  <h2>{questionsArray[index - 1].question}</h2>
-                                  <p>{user.playerType}</p>
-                              </>
-                          )}
+                    {questionsArray.length !== 0 && (
+                        <>
+                            <h2>{questionsArray[index - 1].question}</h2>
+                        </>
+                    )}
                 </Box>
                 <Box boxShadow={3} className="question__answer">
                     <Grid
@@ -144,38 +122,20 @@ const QuestionsPage = () => {
                         direction="row"
                         justifyContent="space-around"
                         alignItems="center">
-                        {false
-                            ? firstQuestionsArray.length !== 0 &&
-                              firstQuestionsArray[index - 1].answers.map(
-                                  (answer, i) => (
-                                      <Button
-                                          onClick={() => {
-                                              handleFirstQuestions(index, i);
-                                          }}
-                                          variant="outlined"
-                                          color="primary"
-                                          size="large">
-                                          {answer}
-                                      </Button>
-                                  )
-                              )
-                            : questionsArray.length !== 0 &&
-                              questionsArray[index - 1].answers.map(
-                                  (answer, i) => (
-                                      <Button
-                                          onClick={() => {
-                                              handleFirstQuestions(
-                                                  index - 1,
-                                                  i
-                                              );
-                                          }}
-                                          variant="outlined"
-                                          color="primary"
-                                          size="large">
-                                          {answer}
-                                      </Button>
-                                  )
-                              )}
+                        {questionsArray.length !== 0 &&
+                            questionsArray[index - 1].answers.map(
+                                (answer, i) => (
+                                    <Button
+                                        onClick={() => {
+                                            handleFirstQuestions(index - 1, i);
+                                        }}
+                                        variant="outlined"
+                                        color="primary"
+                                        size="large">
+                                        {answer}
+                                    </Button>
+                                )
+                            )}
                     </Grid>
                 </Box>
             </Grid>
