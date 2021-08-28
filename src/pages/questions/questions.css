@@ -11,9 +11,20 @@
   background-size: contain;
 }
 
+.question__background__icon {
+    padding: 10px 0 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+}
+.question__background__icon:hover {
+    cursor: pointer;
+}
+
 .question__container {
     margin-left: 8vw;
-    width: 65vw;
+    width: 60vw;
     height: 12vh;
     border-radius: 20px;
     background-color: #E5E4E2;
@@ -25,11 +36,15 @@
 
 .question__answer {
     margin-left: 8vw;
-    width: 65vw;
+    width: 60vw;
     height: 15vh;
     display: flex;
     justify-content: center;
     border-radius: 20px;
     
     background-color: #CCCBCA;
+}
+
+.question__images {
+    margin-left: 5vw;
 }

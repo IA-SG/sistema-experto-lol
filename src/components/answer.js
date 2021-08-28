@@ -1,13 +1,22 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
-const AnswerComponent = ({ question, answers }) => {
+const AnswerComponent = ({ index, answerIndex, user, answer, handleFirstQuestions, handleQuestionNext }) => {
   return (
-    <>
-      <h1>{question}</h1>
-      {answers.map((answer, index) => (
-        <h2 key={index}>{answer}</h2>
-      ))}
-    </>
+    <Button
+      key={answerIndex}
+      onClick={() => {
+        !user.desglozar
+          ? handleFirstQuestions(index - 1, answerIndex)
+          : handleQuestionNext(index, answerIndex);
+      }}
+      style={{ margin: "10px" }}
+      variant="contained"
+      color="primary"
+      size="large"
+    >
+      {answer}
+    </Button>
   );
 };
 

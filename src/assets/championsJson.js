@@ -97,7 +97,7 @@ export const championArray = [
     },
     {
         id: 25,
-        name: 'Amumu',
+        name: 'AMUMU',
     },
     {
         id: 26,
