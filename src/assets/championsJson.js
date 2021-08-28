@@ -1,32 +1,48 @@
+
 export const championArray = [
     {
         id: 1,
         name: 'SHEN',
+        idQuestion: 4,
+        answer: 0, 
     },
     {
         id: 2,
         name: 'KLED',
+        idQuestion: 4,
+        answer: 0,
     },
     {
         id: 3,
         name: 'DARIUS',
+        idQuestion: 4,
+        answer: 1,
     },
     {
         id: 4,
         name: 'GAREN',
+        idQuestion: 4,
+        answer: 1,
     },
     {
         id: 5,
         name: 'NASUS',
+        idQuestion: 3,
+        answer: 0,
     },
     {
         id: 6,
         name: 'DR.MUNDO',
+        idQuestion: 3,
+        answer: 0,
     },
     {
         id: 7,
         name: 'JAX',
+        idQuestion: 3,
+        answer: 1,
     },
+    /*
     {
         id: 8,
         name: 'SINGED',
@@ -171,4 +187,5 @@ export const championArray = [
         id: 43,
         name: 'TARIC',
     },
+    */
 ];

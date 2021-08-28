@@ -6,7 +6,7 @@ const QuestionComponent = ({ questionsArray, index }) => {
     <Box boxShadow={3} className="question__container">
       {questionsArray.length !== 0 && (
         <>
-          <h2>{questionsArray[index - 1].question}</h2>
+          <h2>{questionsArray[index].question}</h2>
         </>
       )}
     </Box>

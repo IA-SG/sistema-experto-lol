@@ -7,7 +7,7 @@ const AnswerComponent = ({ index, answerIndex, user, answer, handleFirstQuestion
       key={answerIndex}
       onClick={() => {
         !user.desglozar
-          ? handleFirstQuestions(index - 1, answerIndex)
+          ? handleFirstQuestions(index, answerIndex)
           : handleQuestionNext(index, answerIndex);
       }}
       style={{ margin: "10px" }}

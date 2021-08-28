@@ -40,7 +40,7 @@ const images = [
         title: 'champion Malphite',
     },
     {
-        id: 'MUNDO',
+        id: 'DR.MUNDO',
         src: '/images/MUNDO.jpg',
         title: 'champion Mundo',
     },
