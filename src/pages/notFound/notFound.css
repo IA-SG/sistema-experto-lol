@@ -1,0 +1,9 @@
+.notfound__background {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.notfound__button {
+  margin-top: 40px;
+}
