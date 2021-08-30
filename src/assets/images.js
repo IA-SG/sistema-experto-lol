@@ -51,7 +51,7 @@ const images = [
     },
     {
         id: 'SHEN',
-        src: 'images/SHEN.jpg',
+        src: '../../images/SHEN.jpg',
         title: 'champion Shen',
     },
     {
