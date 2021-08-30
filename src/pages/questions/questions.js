@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import BackgroundComponent from "../../components/background_animation";
 import CardComponent from "../../components/card";
 import QuestionComponent from "../../components/question";
 import AnswerComponent from "../../components/answer";
@@ -6,6 +7,7 @@ import { questionsArray } from "../../assets/questionsJson";
 import { championArray } from "../../assets/championsJson";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import IconButton from "@material-ui/core/IconButton";
 import LoopRoundedIcon from "@material-ui/icons/LoopRounded";
 import images from "../../assets/images";
 import "./questions.css";
@@ -20,7 +22,6 @@ const QuestionsPage = () => {
   });
   const [champions, setChampions] = useState([]);
   const [isChampions, setIsChampions] = useState(false);
-  const [isHover, setIsHover] = useState(false);
 
   const hanldeQuestion = (user, playerType) => {
     if (user.line === 0) {
@@ -211,57 +212,64 @@ const QuestionsPage = () => {
     }
   };
   return (
-    <div className="question__background">
-      <LoopRoundedIcon
-        onClick={handleClick}
-        onMouseEnter={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
-        className="question__background__icon"
-        style={{ fontSize: !isHover ? 28 : 30 }}
-      />
-      {!isChampions ? (
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="flex-start"
-        >
-          <QuestionComponent questionsArray={questionsArray} index={index} />
-          <div style={{ height: "5vh" }}></div>
-          <Box boxShadow={3} className="question__answer">
-            <Grid
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              {questionsArray.length !== 0 &&
-                questionsArray[index - 1].answers.map((answer, answerIndex) => (
-                  <AnswerComponent
-                    user={user}
-                    answer={answer}
-                    index={index}
-                    answerIndex={answerIndex}
-                    handleFirstQuestions={handleFirstQuestions}
-                    handleQuestionNext={handleQuestionNext}
-                  />
-                ))}
-            </Grid>
-          </Box>
-        </Grid>
-      ) : (
-        <Grid
-          container
-          direction="row"
-          justifyContent="flex-start"
-          alignItems="center"
-          className="question__images"
-        >
-          {champions.length !== 0 &&
-            champions.map((champion) => <>{renderImages(champion.name)}</>)}
-        </Grid>
-      )}
-    </div>
+    <>
+      <BackgroundComponent />
+      <div className="question__background">
+        <div>
+          <IconButton
+            onClick={handleClick}
+            color="primary"
+            aria-label="reiniciar formulario"
+          >
+            <LoopRoundedIcon className="question__background__icon" style={{ fontSize: 30 }} />
+          </IconButton>
+        </div>
+        {!isChampions ? (
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="flex-start"
+          >
+            <QuestionComponent questionsArray={questionsArray} index={index} />
+            <div style={{ height: "5vh" }}></div>
+            <Box boxShadow={3} className="question__answer">
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                {questionsArray.length !== 0 &&
+                  questionsArray[index - 1].answers.map(
+                    (answer, answerIndex) => (
+                      <AnswerComponent
+                        user={user}
+                        answer={answer}
+                        index={index}
+                        answerIndex={answerIndex}
+                        handleFirstQuestions={handleFirstQuestions}
+                        handleQuestionNext={handleQuestionNext}
+                      />
+                    )
+                  )}
+              </Grid>
+            </Box>
+          </Grid>
+        ) : (
+          <Grid
+            container
+            direction="row"
+            justifyContent="flex-start"
+            alignItems="center"
+            className="question__images"
+          >
+            {champions.length !== 0 &&
+              champions.map((champion) => <>{renderImages(champion.name)}</>)}
+          </Grid>
+        )}
+      </div>
+    </>
   );
 };
 
