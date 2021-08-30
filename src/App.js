@@ -4,13 +4,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  HashRouter,
 } from "react-router-dom";
 import NotFoundPage from "./pages/notFound/notFound";
 
 function App() {
   return (
-    <HashRouter basename="/">
       <Router>
         <Switch>
           <Route path="/questions">
@@ -24,7 +22,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </HashRouter>
   );
 }
 
