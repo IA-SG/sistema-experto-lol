@@ -1,6 +1,7 @@
 import HomePage from "./pages/home/home";
 import QuestionsPage from "./pages/questions/questions";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NotFoundPage from "./pages/notFound/notFound";
 
 function App() {
   return (
@@ -9,8 +10,11 @@ function App() {
         <Route path="/questions">
           <QuestionsPage />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <HomePage />
+        </Route>
+        <Route path="*">
+          <NotFoundPage />
         </Route>
       </Switch>
     </Router>
