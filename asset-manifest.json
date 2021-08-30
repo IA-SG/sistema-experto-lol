@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/IA-SG/sistema-experto-lol.git/static/css/main.a0aa9f57.chunk.css",
+    "main.js": "/IA-SG/sistema-experto-lol.git/static/js/main.1940ff5f.chunk.js",
+    "main.js.map": "/IA-SG/sistema-experto-lol.git/static/js/main.1940ff5f.chunk.js.map",
+    "runtime-main.js": "/IA-SG/sistema-experto-lol.git/static/js/runtime-main.477725f0.js",
+    "runtime-main.js.map": "/IA-SG/sistema-experto-lol.git/static/js/runtime-main.477725f0.js.map",
+    "static/css/2.7a93ed28.chunk.css": "/IA-SG/sistema-experto-lol.git/static/css/2.7a93ed28.chunk.css",
+    "static/js/2.f895d3e1.chunk.js": "/IA-SG/sistema-experto-lol.git/static/js/2.f895d3e1.chunk.js",
+    "static/js/2.f895d3e1.chunk.js.map": "/IA-SG/sistema-experto-lol.git/static/js/2.f895d3e1.chunk.js.map",
+    "static/js/3.a51bc078.chunk.js": "/IA-SG/sistema-experto-lol.git/static/js/3.a51bc078.chunk.js",
+    "static/js/3.a51bc078.chunk.js.map": "/IA-SG/sistema-experto-lol.git/static/js/3.a51bc078.chunk.js.map",
+    "index.html": "/IA-SG/sistema-experto-lol.git/index.html",
+    "static/css/2.7a93ed28.chunk.css.map": "/IA-SG/sistema-experto-lol.git/static/css/2.7a93ed28.chunk.css.map",
+    "static/css/main.a0aa9f57.chunk.css.map": "/IA-SG/sistema-experto-lol.git/static/css/main.a0aa9f57.chunk.css.map",
+    "static/js/2.f895d3e1.chunk.js.LICENSE.txt": "/IA-SG/sistema-experto-lol.git/static/js/2.f895d3e1.chunk.js.LICENSE.txt",
+    "static/media/all-champs.d4983bf2.jpg": "/IA-SG/sistema-experto-lol.git/static/media/all-champs.d4983bf2.jpg",
+    "static/media/notfound.54d4c1ed.gif": "/IA-SG/sistema-experto-lol.git/static/media/notfound.54d4c1ed.gif",
+    "static/media/index.css": "/IA-SG/sistema-experto-lol.git/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
+    "static/media/questions.css": "/IA-SG/sistema-experto-lol.git/static/media/zed.2668d2c7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.477725f0.js",
+    "static/css/2.7a93ed28.chunk.css",
+    "static/js/2.f895d3e1.chunk.js",
+    "static/css/main.a0aa9f57.chunk.css",
+    "static/js/main.1940ff5f.chunk.js"
+  ]
+}
