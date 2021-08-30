@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/sistema-experto-lol/static/css/main.efb8b289.chunk.css",
-    "main.js": "/sistema-experto-lol/static/js/main.1940ff5f.chunk.js",
-    "main.js.map": "/sistema-experto-lol/static/js/main.1940ff5f.chunk.js.map",
+    "main.js": "/sistema-experto-lol/static/js/main.f61aeff1.chunk.js",
+    "main.js.map": "/sistema-experto-lol/static/js/main.f61aeff1.chunk.js.map",
     "runtime-main.js": "/sistema-experto-lol/static/js/runtime-main.83fb514a.js",
     "runtime-main.js.map": "/sistema-experto-lol/static/js/runtime-main.83fb514a.js.map",
     "static/css/2.414303d9.chunk.css": "/sistema-experto-lol/static/css/2.414303d9.chunk.css",
-    "static/js/2.f895d3e1.chunk.js": "/sistema-experto-lol/static/js/2.f895d3e1.chunk.js",
-    "static/js/2.f895d3e1.chunk.js.map": "/sistema-experto-lol/static/js/2.f895d3e1.chunk.js.map",
+    "static/js/2.cfcf3dcf.chunk.js": "/sistema-experto-lol/static/js/2.cfcf3dcf.chunk.js",
+    "static/js/2.cfcf3dcf.chunk.js.map": "/sistema-experto-lol/static/js/2.cfcf3dcf.chunk.js.map",
     "static/js/3.a51bc078.chunk.js": "/sistema-experto-lol/static/js/3.a51bc078.chunk.js",
     "static/js/3.a51bc078.chunk.js.map": "/sistema-experto-lol/static/js/3.a51bc078.chunk.js.map",
     "index.html": "/sistema-experto-lol/index.html",
     "static/css/2.414303d9.chunk.css.map": "/sistema-experto-lol/static/css/2.414303d9.chunk.css.map",
     "static/css/main.efb8b289.chunk.css.map": "/sistema-experto-lol/static/css/main.efb8b289.chunk.css.map",
-    "static/js/2.f895d3e1.chunk.js.LICENSE.txt": "/sistema-experto-lol/static/js/2.f895d3e1.chunk.js.LICENSE.txt",
+    "static/js/2.cfcf3dcf.chunk.js.LICENSE.txt": "/sistema-experto-lol/static/js/2.cfcf3dcf.chunk.js.LICENSE.txt",
     "static/media/all-champs.d4983bf2.jpg": "/sistema-experto-lol/static/media/all-champs.d4983bf2.jpg",
     "static/media/notfound.54d4c1ed.gif": "/sistema-experto-lol/static/media/notfound.54d4c1ed.gif",
     "static/media/index.css": "/sistema-experto-lol/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.83fb514a.js",
     "static/css/2.414303d9.chunk.css",
-    "static/js/2.f895d3e1.chunk.js",
+    "static/js/2.cfcf3dcf.chunk.js",
     "static/css/main.efb8b289.chunk.css",
-    "static/js/main.1940ff5f.chunk.js"
+    "static/js/main.f61aeff1.chunk.js"
   ]
 }
