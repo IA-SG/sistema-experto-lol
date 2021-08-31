@@ -3,7 +3,7 @@ import "../assets/styles/background_animation.css";
 
 const BackgroundComponent = () => {
   return (
-    <div class="background">
+    <div>
       <span></span>
       <span></span>
       <span></span>
