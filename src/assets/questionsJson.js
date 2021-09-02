@@ -1,4 +1,4 @@
-export const ANSWER_STATIC = ["Si", "No"];
+export const ANSWER_STATIC = ["SI", "NO"];
 export const LINE = ["Top", "Jungla", "Mid", "Adc", "Support"];
 export const DAMAGE = ["AD", "AP"];
 export const PLAYER_TYPE = ["Agresivo", "Pasivo"];
