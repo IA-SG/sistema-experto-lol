@@ -46,6 +46,7 @@ const HomePage = () => {
           color="primary"
           size="large"
           onClick={handleDialog}
+          disabled={true}
         >
           Tutorial
         </Button>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export const ANSWER_STATIC = ["Si", "No"];
-=======
 export const ANSWER_STATIC = ["SI", "NO"];
->>>>>>> 6d17bc8d6f3b0e48456fc7d04ad2787d9295265b
 export const LINE = ["Top", "Jungla", "Mid", "Adc", "Support"];
 export const DAMAGE = ["AD", "AP"];
 export const PLAYER_TYPE = ["Agresivo", "Pasivo"];
@@ -74,7 +70,7 @@ export const questionsArray = [
   },
   {
     id: 8,
-    question: "¿Normalmente te gusta iniciar peleas Jungle?",
+    question: "¿Te gusta durar/resistir en batallas?",
     answers: ANSWER_STATIC,
     line: LINE[1],
     damage: DAMAGE[0],
@@ -150,6 +146,22 @@ export const questionsArray = [
     question: "¿Normalmente te gusta iniciar peleas Supp?",
     answers: ANSWER_STATIC,
     line: LINE[4],
+    damage: DAMAGE[0],
+    typePlayer: PLAYER_TYPE[1],
+  },
+  {
+    id: 18,
+    question: "¿Prefieres un campeón con mucha velocidad de ataque y poco daño?",
+    answers: ANSWER_STATIC,
+    line: LINE[3],
+    damage: DAMAGE[0],
+    typePlayer: PLAYER_TYPE[0],
+  },
+  {
+    id: 19,
+    question: "¿Prefieres un campeón con daño en area o de un solo objetivo?",
+    answers: ["Daño en area", "Daño a un objetivo"],
+    line: LINE[3],
     damage: DAMAGE[0],
     typePlayer: PLAYER_TYPE[1],
   },
