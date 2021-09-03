@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .notfound__background {
   height: 100vh;
   overflow: hidden;
@@ -7,3 +8,14 @@
 .notfound__button {
   margin-top: 40px;
 }
+=======
+.notfound__background {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.notfound__button {
+  margin-top: 40px;
+}
+>>>>>>> 6d17bc8d6f3b0e48456fc7d04ad2787d9295265b

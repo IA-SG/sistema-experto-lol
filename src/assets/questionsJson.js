@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 export const ANSWER_STATIC = ["Si", "No"];
+=======
+export const ANSWER_STATIC = ["SI", "NO"];
+>>>>>>> 6d17bc8d6f3b0e48456fc7d04ad2787d9295265b
 export const LINE = ["Top", "Jungla", "Mid", "Adc", "Support"];
 export const DAMAGE = ["AD", "AP"];
 export const PLAYER_TYPE = ["Agresivo", "Pasivo"];
