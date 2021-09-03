@@ -29,6 +29,11 @@
     transform: translate(-50%, -50%);
     font-size: 1rem !important;
   }
+
+  .background__link {
+    text-decoration: none;
+    margin-right: 8vw;
+   }
   
   .goo {
       box-decoration-break: clone;

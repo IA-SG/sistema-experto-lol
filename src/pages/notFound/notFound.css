@@ -2,8 +2,11 @@
   height: 100vh;
   overflow: hidden;
   width: 100%;
+  position: absolute;
+  z-index: 8;
 }
 
 .notfound__button {
   margin-top: 40px;
+  text-decoration: none;
 }

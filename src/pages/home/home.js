@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import DialogComponent from "../../components/dialog";
 import Button from "@material-ui/core/Button";
 import allChampsImg from "../../assets/all-champs.jpg";
 import { Link } from "react-router-dom";
 import "./home.css";
 
 const HomePage = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleDialog = () => {
+    setOpen(!open);
+  };
+
   return (
     <div className="background__container">
       <h1 className="background__title goo">
@@ -28,20 +35,29 @@ const HomePage = () => {
           </filter>
         </defs>
       </svg>
-      <Link to="/questions">
+      <div className="background__button">
+        <Link to="/questions" className="background__link">
+          <Button variant="contained" color="primary" size="large">
+            Empezar
+          </Button>
+        </Link>
         <Button
-          className="background__button"
           variant="contained"
           color="primary"
           size="large"
+          onClick={handleDialog}
         >
-          Empezar
+          Tutorial
         </Button>
-      </Link>
+      </div>
       <img
         src={allChampsImg}
         className="background__image"
         alt="League of Legends - Wallpaper 4K"
+      />
+      <DialogComponent
+        isOpen={open}
+        handleClose={handleDialog}
       />
     </div>
   );
