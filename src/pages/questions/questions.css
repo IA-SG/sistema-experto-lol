@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .question__background {
   position: absolute;
   z-index: 8;
@@ -36,4 +37,44 @@
 
 .question__images {
     margin-left: 5vw;
+=======
+.question__background {
+  position: absolute;
+  z-index: 8;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("../../assets/zed.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.question__container {
+    margin-left: 8vw;
+    width: 60vw;
+    height: 12vh;
+    border-radius: 20px;
+    background-color: #E5E4E2;
+}
+
+.question__container h2 {
+    text-align: center;
+}
+
+.question__answer {
+    margin-left: 8vw;
+    width: 60vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    
+    background-color: #CCCBCA;
+}
+
+.question__images {
+    margin-left: 5vw;
+>>>>>>> 6d17bc8d6f3b0e48456fc7d04ad2787d9295265b
 }

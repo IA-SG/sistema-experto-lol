@@ -27,6 +27,19 @@ const QuestionsPage = () => {
     const [isChampions, setIsChampions] = useState(false);
 
     const hanldeQuestion = (user, player) => {
+<<<<<<< HEAD
+=======
+        if (user.line.toLowerCase() === 'mid' &&
+        user.damage.toLowerCase() === 'ad' 
+        && player.toLowerCase() === 'pasivo') {
+            const finalChamps = championArray.filter(
+                (champion) => champion.idQuestion === 100
+            );
+            setChampions(finalChamps);
+            setIsChampions(true);
+            return;
+        }
+>>>>>>> 6d17bc8d6f3b0e48456fc7d04ad2787d9295265b
         const questionsArrayInt = questionsArray.filter(
             (question) =>
                 question.line.toLowerCase() === user.line.toLowerCase() &&
