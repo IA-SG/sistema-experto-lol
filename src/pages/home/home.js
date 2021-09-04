@@ -51,7 +51,7 @@ const HomePage = () => {
           Tutorial
         </Button>
       </div>
-      <LazyImageComponent className="background__image" src={allChampsImg} alt="League of Legends - Wallpaper 4K" />
+      <LazyImageComponent className="background__image" src={allChampsImg} alt="League of Legends - Wallpaper 4K" height={window.screen.height} width={window.screen.width}/>
       <DialogComponent
         isOpen={open}
         handleClose={handleDialog}

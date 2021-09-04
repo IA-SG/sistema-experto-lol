@@ -16,7 +16,7 @@ const CardComponent = ({ id, src, title }) => {
     <div style={{ margin: "10px" }}>
       <Card key={id}>
         <CardActionArea>
-          <LazyImageComponent src={src} alt={title}/>
+          <LazyImageComponent src={src} alt={title} width={350} height={250}/>
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
               {capitalizeFirstLetter(id)}
