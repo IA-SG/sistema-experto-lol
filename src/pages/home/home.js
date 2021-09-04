@@ -3,6 +3,7 @@ import DialogComponent from "../../components/dialog";
 import Button from "@material-ui/core/Button";
 import allChampsImg from "../../assets/all-champs.jpg";
 import { Link } from "react-router-dom";
+import LazyImageComponent from "../../components/lazy-image";
 import "./home.css";
 
 const HomePage = () => {
@@ -46,16 +47,11 @@ const HomePage = () => {
           color="primary"
           size="large"
           onClick={handleDialog}
-          disabled={true}
         >
           Tutorial
         </Button>
       </div>
-      <img
-        src={allChampsImg}
-        className="background__image"
-        alt="League of Legends - Wallpaper 4K"
-      />
+      <LazyImageComponent className="background__image" src={allChampsImg} alt="League of Legends - Wallpaper 4K" />
       <DialogComponent
         isOpen={open}
         handleClose={handleDialog}

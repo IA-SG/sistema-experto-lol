@@ -10,7 +10,7 @@ import {
     questionsArray,
 } from '../../assets/questionsJson';
 import { championArray } from '../../assets/championsJson';
-import { Grid, Box, IconButton } from '@material-ui/core';
+import { Grid, Box, IconButton, Tooltip } from '@material-ui/core';
 import LoopRoundedIcon from '@material-ui/icons/LoopRounded';
 import images from '../../assets/images';
 import './questions.css';
@@ -28,8 +28,8 @@ const QuestionsPage = () => {
 
     const hanldeQuestion = (user, player) => {
         if (user.line.toLowerCase() === 'mid' &&
-        user.damage.toLowerCase() === 'ad' 
-        && player.toLowerCase() === 'pasivo') {
+            user.damage.toLowerCase() === 'ad'
+            && player.toLowerCase() === 'pasivo') {
             const finalChamps = championArray.filter(
                 (champion) => champion.idQuestion === 100
             );
@@ -101,15 +101,17 @@ const QuestionsPage = () => {
             <BackgroundComponent />
             <div className="question__background">
                 <div>
-                    <IconButton
-                        onClick={handleClick}
-                        color="primary"
-                        aria-label="reiniciar formulario">
-                        <LoopRoundedIcon
-                            className="question__background__icon"
-                            style={{ fontSize: 30 }}
-                        />
-                    </IconButton>
+                    <Tooltip title="Reiniciar preguntas" placement="right" >
+                        <IconButton
+                            onClick={handleClick}
+                            color="primary"
+                            aria-label="reiniciar formulario">
+                            <LoopRoundedIcon
+                                className="question__background__icon"
+                                style={{ fontSize: 30 }}
+                            />
+                        </IconButton>
+                    </Tooltip>
                 </div>
                 {!isChampions ? (
                     <Grid

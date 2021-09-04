@@ -1,15 +1,19 @@
-import HomePage from "./pages/home/home";
-import QuestionsPage from "./pages/questions/questions";
+import React, { Suspense, lazy } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import NotFoundPage from "./pages/notFound/notFound";
+
+import HomePage from "./pages/home/home";
+import LoadingComponent from "./components/loading";
+const QuestionsPage = lazy(() => import("./pages/questions/questions"));
+const NotFoundPage = lazy(() => import("./pages/notFound/notFound"));
 
 function App() {
   return (
-      <Router>
+    <Router>
+      <Suspense fallback={<LoadingComponent />}>
         <Switch>
           <Route path="/questions">
             <QuestionsPage />
@@ -21,7 +25,8 @@ function App() {
             <NotFoundPage />
           </Route>
         </Switch>
-      </Router>
+      </Suspense>
+    </Router>
   );
 }
 
