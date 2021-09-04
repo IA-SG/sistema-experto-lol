@@ -3,7 +3,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 const LoadingComponent = () => {
     return (
-        <div style={{ height: '100vh', width: '100vw', display: 'flex', justifyContent: 'center' }}>
+        <div style={{  margin: 'auto', width: '10vw' }}>
             <CircularProgress />
         </div>
     );
